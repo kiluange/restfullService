@@ -8,4 +8,6 @@ import com.example.locadora.model.Cliente;
 @Repository
 public interface ClienteRepositoryImpl extends JpaRepository<Cliente, Long>{
 
+	Object findClienteByCnh(Integer cnh);
+
 }

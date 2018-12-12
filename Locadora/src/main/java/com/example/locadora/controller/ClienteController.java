@@ -32,6 +32,11 @@ public class ClienteController {
 			return List.of(clienteService.buscarUmCliente(id).get());
 		}
 	}
+	
+	@GetMapping("/pfisica")
+	private Object getCLienteByCpf(@RequestParam(value = "cnh", required = true) Integer cnh) {
+		return clienteService.buscarCLientePorCnh(cnh); 		
+	}
 
 	@PutMapping("")
 	private Cliente putCliente(@RequestParam(value = "id", required = true) Long id) {

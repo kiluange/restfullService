@@ -33,4 +33,8 @@ public class ClienteService {
 
 	}
 
+	public Object buscarCLientePorCnh(Integer cpf) {
+		return clienteRepositoryImpl.findClienteByCnh(cpf);
+	}
+
 }
